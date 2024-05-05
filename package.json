@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "stocksocket": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/ioredis": "^5.0.0"
   }
 }
