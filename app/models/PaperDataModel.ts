@@ -1,14 +1,19 @@
-export interface PaperDataModel {
-    id: string,
-    price: number,
-    time: number,
-    exchange: string,
-    quoteType: string,
-    marketHours: string,
-    changePercent: number,
-    dayVolume: number,
-    change: number,
-    priceHint: number
+export class PaperDataModel {
+    id: string;
+    price: number;
+    // time: number,
+    // exchange: string,
+    // quoteType: string,
+    // marketHours: string,
+    // changePercent: number,
+    // dayVolume: number,
+    // change: number,
+    // priceHint: number
+
+    constructor(data: any) {
+        this.id = data.id;
+        this.price = data.price;
+    }
 }
 
 // {

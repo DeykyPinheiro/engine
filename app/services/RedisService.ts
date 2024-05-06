@@ -1,8 +1,10 @@
 import Redis from 'ioredis';
 
-export function postDataToChannel(channel: string, data: string) {
+import { PaperDataModel } from '../models/PaperDataModel';
+
+export function postDataToChannel(channel: string, data: PaperDataModel) {
     const redis = new Redis();
-    data = JSON.stringify(data)
+    const dataConvert = JSON.stringify(new PaperDataModel(data))
     // console.log("escrevendo no canal: " + JSON.stringify(data))
-    redis.publish(channel, data);
+    redis.publish(channel, dataConvert);
 }
